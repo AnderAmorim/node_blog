@@ -6,6 +6,10 @@ const connection = require('./database/database');
 const categoriesController = require('./categories/categoriesController')
 const articlesController = require('./articles/articlesController.js');
 
+
+const Article = require("./articles/Article");
+const Category = require("./categories/Category");
+
 connection.authenticate()
   .then((sucess)=>{
     console.log('Connect in DB')
