@@ -7,10 +7,10 @@ const categoriesController = require('./categories/categoriesController')
 const articlesController = require('./articles/articlesController.js');
 
 connection.authenticate()
-  .then((error)=>{
+  .then((sucess)=>{
     console.log('Connect in DB')
   })
-  .catch(()=>{
+  .catch((error)=>{
     console.log('Erro connect in DB: ',error)
   })
 
@@ -26,6 +26,6 @@ app.get('/',(req,res)=>{
   res.render('index')
 })
 
-app.listen(8080,()=>{
+app.listen(8081,()=>{
   console.log("App start")
 })
